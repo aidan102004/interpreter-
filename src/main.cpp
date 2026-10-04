@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include "../include/lexer.h"
 int main() {
-    std::cout << "hello" << std::endl;
+    Lexer lexer;
+    lexer.run_lexer("test.abs");
 }

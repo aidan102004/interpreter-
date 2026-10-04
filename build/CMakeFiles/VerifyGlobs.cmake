@@ -4,6 +4,7 @@
 # SOURCES at CMakeLists.txt:18 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/Users/aidanabidi/interpreter /src/*.cpp")
 set(OLD_GLOB
+  "/Users/aidanabidi/interpreter /src/lexer.cpp"
   "/Users/aidanabidi/interpreter /src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

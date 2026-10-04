@@ -5,6 +5,7 @@
 			"expression" : "/Users/aidanabidi/interpreter /src/*.cpp",
 			"paths" : 
 			[
+				"/Users/aidanabidi/interpreter /src/lexer.cpp",
 				"/Users/aidanabidi/interpreter /src/main.cpp"
 			],
 			"recurse" : true

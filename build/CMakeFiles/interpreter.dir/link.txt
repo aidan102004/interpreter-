@@ -1,1 +1,1 @@
-/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/interpreter.dir/src/main.cpp.o -o interpreter
+/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/interpreter.dir/src/lexer.cpp.o CMakeFiles/interpreter.dir/src/main.cpp.o -o interpreter

@@ -16,6 +16,17 @@ const std::unordered_map<TokenType, std::string> type_names = {
     {TokenType::SLASH, "SLASH"},             {TokenType::STRING, "STRING"},
     {TokenType::NUMBER, "NUMBER"},           {TokenType::IDENTIFIER, "IDENTIFIER"},
     {TokenType::EOF_TOKEN, "EOF"},           {TokenType::UNKNOWN, "UNKNOWN"},
+    {TokenType::COMMENT, "COMMENT"},
+
+    // keywords
+    {TokenType::AND, "AND"},                 {TokenType::CLASS, "CLASS"},
+    {TokenType::ELSE, "ELSE"},               {TokenType::FALSE, "FALSE"},
+    {TokenType::FOR, "FOR"},                 {TokenType::FUN, "FUN"},
+    {TokenType::IF, "IF"},                   {TokenType::NIL, "NIL"},
+    {TokenType::OR, "OR"},                   {TokenType::PRINT, "PRINT"},
+    {TokenType::RETURN, "RETURN"},           {TokenType::SUPER, "SUPER"},
+    {TokenType::THIS, "THIS"},               {TokenType::TRUE, "TRUE"},
+    {TokenType::VAR, "VAR"},                 {TokenType::WHILE, "WHILE"},
 };
 #pragma endregion
 

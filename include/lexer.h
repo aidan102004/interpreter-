@@ -8,22 +8,18 @@
 class Lexer {
 private:
     bool error = false;
-    const std::unordered_map<char, TokenType> type_register = {
-        {'(', TokenType::LEFT_PAREN},
-        {')', TokenType::RIGHT_PAREN},
-        {'{', TokenType::LEFT_BRACE},
-        {'}', TokenType::RIGHT_BRACE},
-        {',', TokenType::COMMA},
-        {'.', TokenType::DOT},
-        {'-', TokenType::MINUS},
-        {'+', TokenType::PLUS},
-        {';', TokenType::SEMICOLON},
-        {'*', TokenType::STAR},
-        {'=', TokenType::EQUAL},
-        {'!', TokenType::BANG},
-        {'<', TokenType::LESS},
-        {'>', TokenType::GREATER},
-        {'/', TokenType::SLASH},
+    int line_count = 0;
+    const std::unordered_map<std::string, TokenType> type_register = {
+        {"(", TokenType::LEFT_PAREN}, {")", TokenType::RIGHT_PAREN},
+        {"{", TokenType::LEFT_BRACE}, {"}", TokenType::RIGHT_BRACE},
+        {",", TokenType::COMMA},      {".", TokenType::DOT},
+        {"-", TokenType::MINUS},      {"+", TokenType::PLUS},
+        {";", TokenType::SEMICOLON},  {"*", TokenType::STAR},
+        {"=", TokenType::EQUAL},      {"==", TokenType::EQUAL_EQUAL},
+        {"!", TokenType::BANG},       {"!=", TokenType::BANG_EQUAL},
+        {"<", TokenType::LESS},       {"<=", TokenType::LESS_EQUAL},
+        {">", TokenType::GREATER},    {">=", TokenType::GREATER_EQUAL},
+        {"/", TokenType::SLASH}, {"//", TokenType::COMMENT}
     };
     std::string read_file(const std::string& file_name);
 public:

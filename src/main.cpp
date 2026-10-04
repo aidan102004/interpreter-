@@ -22,7 +22,7 @@ const std::unordered_map<TokenType, std::string> type_names = {
 int main() {
     Lexer lexer;
     std::vector<Token> tokens = lexer.run_lexer("../src/test.abs");
-
+    
     //testing output
     for (const auto& t : tokens) {
         std::cout << type_names.at(t.type) << " " << t.lexeme <<  " " << t.literal << std::endl;

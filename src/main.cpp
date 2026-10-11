@@ -1,5 +1,7 @@
 #include <iostream>
 #include "../include/lexer.h"
+#include "../include/parser.h"
+#include "../include/expr.h"
 
 //temp helper dict for debugging lexical analysis
 #pragma region 
@@ -38,5 +40,10 @@ int main() {
     for (const auto& t : tokens) {
         std::cout << type_names.at(t.type) << " " << t.lexeme <<  " " << t.literal << std::endl;
     }
+
+    Parser parser(tokens);
+    std::unique_ptr<Expr> expr = parser.parse();
+
+
     return lexer.had_error() ? 65 : 0;
 }

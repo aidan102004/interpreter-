@@ -3,6 +3,7 @@
 #include <variant>
 #include "expr.h"
 
+//turn expression into text
 struct AstPrinter : ExprVisitor {
     std::string print(const Expr& expr) {
         return expr.accept(*this);

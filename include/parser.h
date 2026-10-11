@@ -4,6 +4,7 @@
 #include "token.h"
 #include "expr.h"
 
+/*read token list and build an expr*/
 class Parser {
 public:
     explicit Parser(std::vector<Token> tokens)
@@ -15,7 +16,7 @@ public:
 
 private:
     std::vector<Token> tokens;
-    size_t current = 0;  
+    size_t current = 0; //index
 
     std::unique_ptr<Expr> expression() {
         return primary();  

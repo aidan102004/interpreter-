@@ -2,6 +2,7 @@
 #include "../include/lexer.h"
 #include "../include/parser.h"
 #include "../include/expr.h"
+#include "../include/astprinter.h"
 
 //temp helper dict for debugging lexical analysis
 #pragma region 
@@ -44,6 +45,9 @@ int main() {
     Parser parser(tokens);
     std::unique_ptr<Expr> expr = parser.parse();
 
+    if (expr) {
+        std::cout << AstPrinter().print(*expr) << std::endl;
+    }
 
     return lexer.had_error() ? 65 : 0;
 }

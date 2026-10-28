@@ -16,6 +16,9 @@ struct AstPrinter : ExprVisitor {
         if (auto b = std::get_if<bool>(&expr.val)) {
             return *b ? "true" : "false";
         }
+        if (auto d = std::get_if<double>(&expr.val)) {
+            return std::to_string(*d);
+        }
         return "";
     }
 };

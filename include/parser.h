@@ -26,7 +26,7 @@ private:
         if (match(TokenType::FALSE)) return std::make_unique<Literal>(false);
         if (match(TokenType::TRUE))  return std::make_unique<Literal>(true);
         if (match(TokenType::NIL))   return std::make_unique<Literal>(std::monostate{});
-        if (match(TokenType::NUMBER)) return std::make_unique<Literal>(previous().literal);
+        if (match(TokenType::NUMBER) || match(TokenType::STRING)) return std::make_unique<Literal>(previous().literal);
         return nullptr;    
     }
 
